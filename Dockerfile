@@ -20,7 +20,7 @@ RUN (cd /lib/systemd/system/sysinit.target.wants/; \
     rm -f /lib/systemd/system/anaconda.target.wants/*
 
 # Replace the default target to boot to systemd
-RUN ln -sf /lib/systemd/system/multi-user.target /etc/systemd/system/default.target
+RUN ln -sf /lib/systemd/system/multi-user.target /etc/systemd/system/default.target; dnf install git-all tar gzip zip unzip ca-certificates -y
 
 # Mount cgroups to avoid errors
 VOLUME [ "/sys/fs/cgroup" ]
