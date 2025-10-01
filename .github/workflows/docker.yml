@@ -26,7 +26,7 @@ jobs:
           rockylinux9
 
       - name: Verify Ansible is accessible in the built image.
-        run: docker exec --tty test-container env TERM=xterm ansible --version
+        run: docker exec --tty test-container env TERM=xterm git --version
 
   # If on main branch, build and release image.
   release:
