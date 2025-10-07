@@ -57,7 +57,7 @@ jobs:
       uses: redhat-actions/buildah-build@v2
       with:
         image: rockylinux9
-        tags: latest ${{ github.sha }} v2 9
+        tags: ${{ github.sha }} 9
         containerfiles: |
           ./Dockerfile
 
